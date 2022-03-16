@@ -1,0 +1,27 @@
+php unit test command : composer require phpunit/phpunit
+create a test folder;
+then create a test file ;
+
+at first write : use PHPUnit\Framework\TestCase;
+and crate a class , same to your file name . this class extends a TestCase;
+for example : class SampleTest extends TestCase {};
+
+after write your test case function ;
+remember that function name have been start (test) word;
+and want to result add ($this->assertEquals(wanted result , variable for result)
+example: 
+      
+														<?php
+
+											use PHPUnit\Framework\TestCase;
+
+											class SampleTest extends TestCase {
+													function testSomething() {
+															$result = 2 + 2;
+															$this->assertEquals(4, $result);
+													}
+											}
+
+for code run command : ./vendor/bin/phpunit tests
+
+
